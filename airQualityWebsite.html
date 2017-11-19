@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+	<head style="padding: 0;">
+		<div id="title">
+			<title type="text">MSEL Air Quality</title>
+			<h1 type="text"><font hex-number="#00b300">MSEL</font> Air Quality</h2>
+		<div>
+		<div id="mainMenu">
+			<ul>
+ 				<li><a id="home" style="cursor:pointer" onclick='changePage("home")'>Home</a></li>
+ 	 			<li><a id="problems" style="cursor:pointer" onclick='changePage("problems")'>Problems</a></li>
+ 	 			<li><a id="solutions" style="cursor:pointer" onclick='changePage("solutions")'>Solutions</a></li>
+  				<li><a id="other" style="cursor:pointer" onclick='changePage("other")'>Other</a></li>
+  				<li><a id="aboutUs" style="cursor:pointer" onclick='changePage("aboutUs")'>About Us</a></li>
+			</ul>
+		</div>
+		<div id="mainBody" style="min-height: 600px;">
+			<div style="width: 100%; display: table; min-height: 600px;">
+			    <div style="display: table-row">
+			        <div id="mainTextBox" style="width: 60%; display: table-cell; background-color: #ccffcc; min-height: 600px;">
+			        	<h2 id="mainTitle"></h2>
+			        	<div>
+			        		<p id="mainText" value="text<br>text<br>text">
+			        		</p>
+			        		<button id="mainButton" onclick='changePage("home")'></button>
+			        	</div>
+			        </div>
+			        <div id="sideText" style="display: table-cell; min-height: 600px;">
+			        	<h2 id="topSideTitle"></h2>
+			        	<div>
+			        		<p id="topSideText">
+			        		</p>
+			        		<button id="topButton" onclick='changePage("home")'></button>
+			        	</div>
+			        	<h2 id="bottomSideTitle"></h2>
+			        	<div>
+			        		<p id="bottomSideText">		
+			        		</p>
+			        		<button id="bottomButton" onclick='changePage("home")'></button>
+			        	</div>
+			        </div>
+			    </div>
+			</div>
+		</div>
+		<div>
+			<ul>
+				<li><a style="cursor:pointer" href="http://www.epa.gov/">EPA</a></li>
+				<li><span>contact info peice</span></li>
+			</ul>
+		</div>
+	</head>
+	<body style="margin: 0;">
+		<style>
+			button {
+				display: block;
+				background-color: #00b300;
+				text-decoration: none;
+			    color: #000000;
+			    display: table;
+				margin-right: auto;
+				margin-left: auto;
+				padding: 10px;
+				font-size: 15px
+
+			}
+			button:focus {outline:0;}
+			li {
+			    float: left;
+			}
+			li a {
+			    padding: 14px 26px;
+			    text-decoration: none;
+			    color: #000000;
+			}
+			li a:hover {
+				background-color: #33ff33;
+			}
+			a {
+			    display: block;
+			    padding: 16px;
+			    background-color: #00b300;
+			}
+			ul {
+				overflow: hidden;
+			    list-style-type: none;
+			    margin: 0;
+			    padding: 0;
+			    background-color: #00b300;
+			}
+			title {
+				padding: 14px 26px;
+				font-size: 30px;
+			}
+		</style>
+	</body>
+	<foot>
+		<script type="text/javascript">
+
+			var text = {
+				"home": {
+					"mtb": "80%",
+					"mt": "We are the MarinSEL air quality group, dedicated to bringing you information about your airquality here in marin.",
+					"mtitle": "MarinSEL Air Group",
+					"tst":"Air Quality is the condition of the air, particularly the amounts of particulate matter, carbon, and nitrous oxide.",
+					"tstitle": "What is Air Quality",
+					"bst":"Bay watch and 350 marin can tell you what your local air quality is, as well as the epa's Air Now, for regional measurements.",
+					"bstitle": "Who  moniters air quality her in marin",
+					"buttonMain": {
+						"hidden": "block",
+						"reDirect": "aboutUs",
+						"value": "About Us"
+					},
+					"buttonTop": {
+						"hidden": "none",
+						"reDirect": "",
+						"value": ""
+					},
+					"buttonBottom": {
+						"hidden": "none",
+						"reDirect": "",
+						"value": ""
+					}
+				},
+				"problems": {
+					"mtb": "60%",
+					"mt":"loremIpsum",
+					"mtitle": "",
+					"tst":"loremIpsum",
+					"tstitle": "",
+					"bst":"loremIpsum",
+					"bstitle": "",
+					"buttonMain": {
+						"hidden": "none",
+						"reDirect": "",
+						"value": ""
+					},
+					"buttonTop": {
+						"hidden": "none",
+						"reDirect": "",
+						"value": ""
+					},
+					"buttonBottom": {
+						"hidden": "none",
+						"reDirect": "",
+						"value": ""
+					}
+				},
+				"solutions": {
+					"mtb": "60%",
+					"mt":"loremIpsum",
+					"mtitle": "",
+					"tst":"loremIpsum",
+					"tstitle": "",
+					"bst":"loremIpsum",
+					"bstitle": "",
+					"buttonMain": {
+						"hidden": "none",
+						"reDirect": "",
+						"value": ""
+					},
+					"buttonTop": {
+						"hidden": "none",
+						"reDirect": "",
+						"value": ""
+					},
+					"buttonBottom": {
+						"hidden": "none",
+						"reDirect": "",
+						"value": ""
+					}
+				},
+				"other": {
+					"mtb": "60%",
+					"mt":"loremIpsum",
+					"mtitle": "",
+					"tst":"loremIpsum",
+					"tstitle": "", 
+					"bst":"loremIpsum",
+					"bstitle": "",
+					"buttonMain": {
+						"hidden": "none",
+						"reDirect": "",
+						"value": ""
+					},
+					"buttonTop": {
+						"hidden": "none",
+						"reDirect": "",
+						"value": ""
+					},
+					"buttonBottom": {
+						"hidden": "none",
+						"reDirect": "",
+						"value": ""
+					}
+				},
+				"aboutUs": {
+					"mtb": "60%",
+					"mt":"loremIpsum",
+					"mtitle": "",
+					"tst":"loremIpsum",
+					"tstitle": "", 
+					"bst":"loremIpsum",
+					"bstitle": "",
+					"buttonMain": {
+						"hidden": "none",
+						"reDirect": "",
+						"value": ""
+					},
+					"buttonTop": {
+						"hidden": "none",
+						"reDirect": "",
+						"value": ""
+					},
+					"buttonBottom": {
+						"hidden": "none",
+						"reDirect": "",
+						"value": ""
+					}
+				}
+			};
+
+			changePage("home");
+
+			function changePage(page) {
+				document.getElementById("home").style.backgroundColor = "#00b300"
+				document.getElementById("problems").style.backgroundColor = "#00b300"
+				document.getElementById("solutions").style.backgroundColor = "#00b300"
+				document.getElementById("other").style.backgroundColor = "#00b300"
+				document.getElementById("aboutUs").style.backgroundColor = "#00b300"
+				document.getElementById(page).style.backgroundColor = "#33ff33"
+				//maintab
+				document.getElementById('mainTextBox').style.width = text[page].mtb
+				document.getElementById('mainText').textContent = text[page].mt
+				document.getElementById('mainTitle').textContent = text[page].mtitle
+				//main button
+				document.getElementById('mainButton').style.display = text[page].buttonMain.hidden
+				document.getElementById('mainButton').onclick = function() {changePage(text[page].buttonMain.reDirect)}
+				document.getElementById('mainButton').textContent = text[page].buttonMain.value
+				//top tab
+				document.getElementById('topSideText').textContent = text[page].tst
+				document.getElementById('topSideTitle').textContent = text[page].tstitle
+				//top button
+				document.getElementById('topButton').style.display = text[page].buttonTop.hidden
+				document.getElementById('topButton').onclick = function() {changePage(text[page].buttonMain.reDirect)}
+				document.getElementById('topButton').textContent = text[page].buttonTop.value	
+				//bottom tab
+				document.getElementById('bottomSideText').textContent = text[page].bst
+				document.getElementById('bottomSideTitle').textContent = text[page].bstitle
+				//bottom button
+				document.getElementById('bottomButton').style.display = text[page].buttonBottom.hidden
+				document.getElementById('bottomButton').onclick = function() {changePage(text[page].buttonMain.reDirect)}
+				document.getElementById('bottomButton').textContent = text[page].buttonBottom.value
+			};
+		</script>
+	</foot>
+</html>
