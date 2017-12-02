@@ -6,7 +6,7 @@
 			<h1 type="text"><font hex-number="#00b300">MSEL</font> Air Quality</h2>
 		<div>
 		<div id="mainMenu">
-			<ul>
+			<ul style="border-bottom:2pt solid black;">
  				<li><a id="home" style="cursor:pointer" onclick='changePage("home")'>Home</a></li>
  	 			<li><a id="problems" style="cursor:pointer" onclick='changePage("problems")'>Problems</a></li>
  	 			<li><a id="solutions" style="cursor:pointer" onclick='changePage("solutions")'>Solutions</a></li>
@@ -18,26 +18,25 @@
 			<div style="width: 100%; display: table; min-height: 600px;">
 			    <div style="display: table-row">
 			        <div id="mainTextBox" style="width: 60%; display: table-cell; background-color: #ccffcc; min-height: 600px;">
-			        	<h2 id="mainTitle"/>
+			        	<h2 id="mainTitle"></h2>
 			        	<div>
-			        		<p id="mainText" value="text<br>text<br>text"/>
-						<ul>
-			        		<vogons><button id="mainButton" onclick='changePage("home")'/></vogons>
-						<vogons><img id="mainImg"/></vogons>
-					</div>
+			        		<p id="mainText" value="text<br>text<br>text">
+			        		</p>
+			        		<vogon id="mainAccent"><img id="mainImage"></img><button id="mainButton" onclick='changePage("home")'></button></vogon>
+			        	</div>
 			        </div>
 			        <div id="sideText" style="display: table-cell; min-height: 600px;">
-			        	<h2 id="topSideTitle"/>
+			        	<h2 id="topSideTitle"></h2>
 			        	<div>
 			        		<p id="topSideText">
 			        		</p>
-			        		<button id="topButton" onclick='changePage("home")'/>
+			        		<vogon><button id="topButton" onclick='changePage("home")'></button></vogon>
 			        	</div>
-			        	<h2 id="bottomSideTitle"/>
+			        	<h2 id="bottomSideTitle"></h2>
 			        	<div>
 			        		<p id="bottomSideText">		
 			        		</p>
-			        		<button id="bottomButton" onclick='changePage("home")'/>
+			        		<vogon><button id="bottomButton" onclick='changePage("home")'></button></vogon>
 			        	</div>
 			        </div>
 			    </div>
@@ -46,7 +45,7 @@
 		<div>
 			<ul>
 				<li><a style="cursor:pointer" href="http://www.epa.gov/">EPA</a></li>
-				<li><span>contact info peice</span></li>
+				<li>contact info peice</li>
 			</ul>
 		</div>
 	</head>
@@ -56,15 +55,15 @@
 				display: block;
 				background-color: #00b300;
 				text-decoration: none;
-			  	color: #000000;
-				font-size: 15px
-
-			}
+			    color: #000000;
+				font-size: 15px;
+				padding: 10px;	
+			}	
 			vogon {
 			    display: table;
 				margin-right: auto;
 				margin-left: auto;
-				padding: 10px;				
+			
 			}
 			button:focus {outline:0;}
 			li {
@@ -75,7 +74,7 @@
 			    text-decoration: none;
 			    color: #000000;
 			}
-			li a:hover {
+			li:hover {
 				background-color: #33ff33;
 			}
 			a {
@@ -129,7 +128,7 @@
 					"mtb": "60%",
 					"mt":"loremIpsum",
 					"mtitle": "",
-					"mi": "null",
+					"mi": "http://cdn1-www.dogtime.com/assets/uploads/2011/03/puppy-development-300x200.jpg",
 					"tst":"loremIpsum",
 					"tstitle": "",
 					"bst":"loremIpsum",
@@ -175,7 +174,7 @@
 						"value": ""
 					}
 				},
-				"Data": {
+				"other": {
 					"mtb": "60%",
 					"mt":"loremIpsum",
 					"mtitle": "",
@@ -240,7 +239,7 @@
 				document.getElementById('mainTextBox').style.width = text[page].mtb
 				document.getElementById('mainText').textContent = text[page].mt
 				document.getElementById('mainTitle').textContent = text[page].mtitle
-				document.getElementById('mainImg').src = text[page].mi
+				document.getElementById('mainImage').src = text[page].mi
 				//main button
 				document.getElementById('mainButton').style.display = text[page].buttonMain.hidden
 				document.getElementById('mainButton').onclick = function() {changePage(text[page].buttonMain.reDirect)}
@@ -263,5 +262,3 @@
 		</script>
 	</foot>
 </html>
-
-			
