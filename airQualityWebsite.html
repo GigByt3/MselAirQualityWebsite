@@ -233,35 +233,41 @@
 			changePage("home");
 
 			function changePage(page) {
-				document.getElementById("home").style.backgroundColor = "#00b300"
-				document.getElementById("problems").style.backgroundColor = "#00b300"
-				document.getElementById("solutions").style.backgroundColor = "#00b300"
-				document.getElementById("data").style.backgroundColor = "#00b300"
-				document.getElementById("aboutUs").style.backgroundColor = "#00b300"
-				document.getElementById(page).style.backgroundColor = "#33ff33"
-				//maintab
-				document.getElementById('mainTextBox').style.width = text[page].mtb
-				document.getElementById('mainText').textContent = text[page].mt
-				document.getElementById('mainTitle').textContent = text[page].mtitle
-				document.getElementById('mainImage').src = text[page].mi
-				//main button
-				document.getElementById('mainButton').style.display = text[page].buttonMain.hidden
-				document.getElementById('mainButton').onclick = function() {changePage(text[page].buttonMain.reDirect)}
-				document.getElementById('mainButton').textContent = text[page].buttonMain.value
-				//top tab
-				document.getElementById('topSideText').textContent = text[page].tst
-				document.getElementById('topSideTitle').textContent = text[page].tstitle
-				//top button
-				document.getElementById('topButton').style.display = text[page].buttonTop.hidden
-				document.getElementById('topButton').onclick = function() {changePage(text[page].buttonMain.reDirect)}
-				document.getElementById('topButton').textContent = text[page].buttonTop.value	
-				//bottom tab
-				document.getElementById('bottomSideText').textContent = text[page].bst
-				document.getElementById('bottomSideTitle').textContent = text[page].bstitle
-				//bottom button
-				document.getElementById('bottomButton').style.display = text[page].buttonBottom.hidden
-				document.getElementById('bottomButton').onclick = function() {changePage(text[page].buttonMain.reDirect)}
-				document.getElementById('bottomButton').textContent = text[page].buttonBottom.value
+				try {
+					document.getElementById("home").style.backgroundColor = "#00b300"
+					document.getElementById("problems").style.backgroundColor = "#00b300"
+					document.getElementById("solutions").style.backgroundColor = "#00b300"
+					document.getElementById("data").style.backgroundColor = "#00b300"
+					document.getElementById("aboutUs").style.backgroundColor = "#00b300"
+					document.getElementById(page).style.backgroundColor = "#33ff33"
+					//maintab
+					document.getElementById('mainTextBox').style.width = text[page].mtb
+					document.getElementById('mainText').textContent = text[page].mt
+					document.getElementById('mainTitle').textContent = text[page].mtitle
+					document.getElementById('mainImage').src = text[page].mi
+					//main button
+					document.getElementById('mainButton').style.display = text[page].buttonMain.hidden
+					document.getElementById('mainButton').onclick = function() {changePage(text[page].buttonMain.reDirect)}
+					document.getElementById('mainButton').textContent = text[page].buttonMain.value
+					//top tab
+					document.getElementById('topSideText').textContent = text[page].tst
+					document.getElementById('topSideTitle').textContent = text[page].tstitle
+					//top button
+					document.getElementById('topButton').style.display = text[page].buttonTop.hidden
+					document.getElementById('topButton').onclick = function() {changePage(text[page].buttonMain.reDirect)}
+					document.getElementById('topButton').textContent = text[page].buttonTop.value	
+					//bottom tab
+					document.getElementById('bottomSideText').textContent = text[page].bst
+					document.getElementById('bottomSideTitle').textContent = text[page].bstitle
+					//bottom button
+					document.getElementById('bottomButton').style.display = text[page].buttonBottom.hidden
+					document.getElementById('bottomButton').onclick = function() {changePage(text[page].buttonMain.reDirect)}
+					document.getElementById('bottomButton').textContent = text[page].buttonBottom.value
+				}
+				
+				catch(err) {
+					console.log(err.mesage)	
+				}
 			};
 		</script>
 	</foot>
