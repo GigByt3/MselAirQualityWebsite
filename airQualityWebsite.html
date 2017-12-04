@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-	<link rel="stylesheet" href="../lib/w3.css">
 	<head style="padding: 0;">
 		<link rel="shortcut icon" type="image/x-icon" href="faviconMsel.ico" />
 		<div id="title">
@@ -24,17 +23,7 @@
 			        	<div>
 			        		<p id="mainText" value="text<br>text<br>text">
 			        		</p>
-			        		<vogon id="mainAccent">
-							<img id="mainImage"></img>
-							<button id="mainButton" onclick='changePage("home")'></button>
-							<div style="max-width:500px">
- 								<img class="mySlides w3-animate-fading" style="width:100%" id="one">
- 								<img class="mySlides w3-animate-fading" style="width:100%" id="two">
- 								<img class="mySlides w3-animate-fading" style="width:100%" id="three">
- 								<img class="mySlides w3-animate-fading" style="width:100%" id="four">
- 								<img class="mySlides w3-animate-fading" style="width:100%" id="five">
-							</div>
-						</vogon>
+			        		<vogon id="mainAccent"><img id="mainImage"></img><button id="mainButton" onclick='changePage("home")'></button></vogon>
 			        	</div>
 			        </div>
 			        <div id="sideText" style="display: table-cell; min-height: 600px;">
@@ -65,10 +54,6 @@
 	</head>
 	<body style="margin: 0;">
 		<style>
-			.mySlides {
-				display: none;
-			}
-			
 			button {
 				display: block;
 				background-color: #00b300;
@@ -115,8 +100,7 @@
 	</body>
 	<foot>
 		<script type="text/javascript">
-			
-			myIndex = 1
+
 			var text = {
 				"home": {
 					"mtb": "50%",
@@ -142,15 +126,7 @@
 						"hidden": "none",
 						"reDirect": "",
 						"value": ""
-					},
-					"Slideshow": {
-						"one": "null",
-						"two": "null",
-						"three": "null",
-						"four": "null",
-						"five": "null",
-						"imgs": "0"
-					
+					}
 				},
 				"problems": {
 					"mtb": "60%",
@@ -175,15 +151,7 @@
 						"hidden": "none",
 						"reDirect": "",
 						"value": ""
-					},
-					"Slideshow": {
-						"one": "null",
-						"two": "null",
-						"three": "null",
-						"four": "null",
-						"five": "null",
-						"imgs": "0"
-					
+					}
 				},
 				"solutions": {
 					"mtb": "60%",
@@ -208,15 +176,7 @@
 						"hidden": "none",
 						"reDirect": "",
 						"value": ""
-					},
-					"Slideshow": {
-						"one": "null",
-						"two": "null",
-						"three": "null",
-						"four": "null",
-						"five": "null",
-						"imgs": "0"
-					
+					}
 				},
 				"data": {
 					"mtb": "60%",
@@ -241,15 +201,7 @@
 						"hidden": "none",
 						"reDirect": "",
 						"value": ""
-					},
-					"Slideshow": {
-						"one": "null",
-						"two": "null",
-						"three": "null",
-						"four": "null",
-						"five": "null",
-						"imgs": "0"
-					
+					}
 				},
 				"aboutUs": {
 					"mtb": "80%",
@@ -274,29 +226,9 @@
 						"hidden": "none",
 						"reDirect": "",
 						"value": ""
-					},
-					"Slideshow": {
-						"one": "null",
-						"two": "null",
-						"three": "null",
-						"four": "null",
-						"five": "null",
-						"imgs": "0"
 					}
 				}
 			};
-			
-			function carousel() {
-			    var i;
-			    var x = document.getElementsByClassName("mySlides");
-			    for (i = 0; i < x.length; i++) {
-				       x[i].style.display = "none";  
-			    }
-			    myIndex++;
-			    if (myIndex > text[page].Slideshow.imgs) {myIndex = 1}    
-			    x[myIndex-1].style.display = "block";  
-			    setTimeout(carousel, 7000);    
-			}
 
 			changePage("home");
 
@@ -317,15 +249,10 @@
 				catch(err) {
 					console.log(err.name + "Error in Content Loading")	
 				}
-				//main accent
+				//main button
 				document.getElementById('mainButton').style.display = text[page].buttonMain.hidden
 				document.getElementById('mainButton').onclick = function() {changePage(text[page].buttonMain.reDirect)}
 				document.getElementById('mainButton').textContent = text[page].buttonMain.value
-				document.getElementById('one').src = text[page].Slideshow.one
-				document.getElementById('two').src = text[page].Slideshow.two
-				document.getElementById('three').src = text[page].Slideshow.three
-				document.getElementById('four').src = text[page].Slideshow.four
-				document.getElementById('five').src = text[page].Slideshow.five
 				//top tab
 				document.getElementById('topSideText').textContent = text[page].tst
 				document.getElementById('topSideTitle').textContent = text[page].tstitle
@@ -340,8 +267,7 @@
 				document.getElementById('bottomButton').style.display = text[page].buttonBottom.hidden
 				document.getElementById('bottomButton').onclick = function() {changePage(text[page].buttonMain.reDirect)}
 				document.getElementById('bottomButton').textContent = text[page].buttonBottom.value
-				
-				if(text[page].Slideshow.imgs !== 0) {carousel(page)}
+
 			};
 		</script>
 	</foot>
