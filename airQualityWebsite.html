@@ -3,16 +3,18 @@
         <head style="padding: 0;">
                 <link rel="shortcut icon" type="image/x-icon" href="https://png.icons8.com/win8/1600/107C10/m-lowercase" />
                 <div id="title">
-                        <title type="text">MSEL Air Quality</title>
-                        <h1 class="Msel" type="text"><font hex-number="#00b300">MSEL</font> Air Quality</h1>
+                        <title type="text">MSEL Air Pollution</title>
+                        <h1 class="Msel" type="text"><font hex-number="#00b300">MSEL</font> Air Pollution</h1>
                 <div>
                 <div id="mainMenu">
-                        <ul style="border-bottom:2pt solid black;">
+                        <ul style="border-bottom:1pt solid black;">
                                 <li><a id="home" style="cursor:pointer" onclick='changePage("home")'>Home</a></li>
                                 <li><a id="problems" style="cursor:pointer" onclick='changePage("problems")'>Problems</a></li>
                                 <li><a id="solutions" style="cursor:pointer" onclick='changePage("solutions")'>Solutions</a></li>
                                 <li><a id="data" style="cursor:pointer" onclick='changePage("data")'>Data</a></li>
+                                <li><a id="Blog" style="cursor:pointer" onclick='changePage("Blog")'>Blog</a></li>
                                 <li><a id="aboutUs" style="cursor:pointer" onclick='changePage("aboutUs")'>About Us</a></li>
+
                         </ul>
                 </div>
                 <div id="mainBody" style="min-height: 600px;">
@@ -23,7 +25,7 @@
                                         <div class="textblock">
                                                 <p id="mainText" value="text<br>text<br>text">
                                                 </p>
-                                                <vogon id="mainAccent"><img style="max-height: 200px; max-width: 300px;" id="mainImage"></img><button id="mainButton" onclick='changePage("home")'></button></vogon>
+                                                <vogon id="mainAccent"><img style="max-height: 400px; max-width: 600px;" id="mainImage"></img><button id="mainButton" onclick='changePage("home")'></button></vogon>
                                         </div>
                                 </div>
                                 <div id="sideText" style="display: table-cell; min-height: 600px;">
@@ -105,12 +107,11 @@
         </body>
         <foot>
                 <script type="text/javascript">
-
                         var text = {
                                 "home": {
                                         "mtb": "50%",
-                                        "mt": "The Msel Air Quality Group is a changing group of concerned students enrolled in the Marin School of Environmental Leadership who work to try and inform you about your local air quality. We have collected data about routes to the schools, Miller Creek middle school, and Venetia Valley middle school. We hope that you can take from this data the motivation to act now and do something about your air quality.",
-                                        "mtitle": "Welcome to the Msel Air Quality Group",
+                                        "mt": "The Msel Air Pollution Group is a changing group of concerned students enrolled in the Marin School of Environmental Leadership who work to try and inform you about your local air quality. We have collected data about routes to the schools, Miller Creek middle school, and Venetia Valley middle school. We hope that you can take from this data the motivation to act now and do something about your air quality.",
+                                        "mtitle": "Welcome to the Msel Air Pollution Group",
                                         "mi": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Marin_County_Civic_Center%2C_Jct._N._San_Pedro_Rd._and_Civic_Center_Dr.%2C_San_Rafael%2C_CA_10-7-2011_4-11-52_PM.jpg",
                                         "tst":"If you are looking for a way to fight for better Air Quality, there are a couple of ways you can get your voice heard. First off, you can write to your senators, and governor, and ask them to implement change. You can also join a local advocacy group like 350 Marin, Airwatch: Bay Area, or any other among a number of groups. Finally, you can just be part of the solution, install solar panels, switch to a renewable energy provider like Marin Clean Energy.",
                                         "tstitle": "Join the Movement",
@@ -161,7 +162,7 @@
                                         "mtb": "60%",
                                         "mt":"You can use public transportation, your local bus system, train, or even carpooling with friends. Another thing that you can do is invest in an electric vehicle, lease or direct purchase, to zero out your emissions. Moving away from transportation, you can install solar panels, invest in solar companies, and boycott particularly environmentally damaging companies like PG&E, switching to local clean energy providers like Marin Clean Energy. You can also invest in renewable electricity providers, and electric vehicle providers, to help those companies get the badly needed resources they need to help bring about the future.",
                                         "mtitle": "What Solutions Exist?",
-                                        "mi": "null",
+                                        "mi": "",
                                         "tst":"350 Marin is a local group who works to fight declining air quality through education, rallies, and working with the county to make public policy. You can join 350 Marin, and see what they are up to on their homepage. You can find a link to them at the bottom of the page. Another group that works to help inform Marin county residents about air quality is Airwatch: Bay Area. Where you can report bad air quality learn about spots of bad air quality in Marin, and find further advocacy groups. Finally, there is Strategic Energy Innovations(SEI), a nonprofit organization, that works to create green communities by working with the public to create sustainability in their communities: education, housing, government, and workforce.",
                                         "tstitle": "What groups exist to combat declining Air Quality?",
                                         "bst":"Use Public Transportation, and dont waste energy and turn off your appliances when you’re not using them. If everyone did these things, then we would be able to cut down on unnecessary emissions overnight.",
@@ -231,7 +232,7 @@
                                                 "reDirect": "",
                                                 "value": ""
                                         }
-			        },
+			        			},
                                 "Blog": {
                                         "mtb": "100%",
                                         "mt":"Phil Tagami, the CEO of California Commercial and Investment, is trying to bring coal into Oakland in order to ship it out by train to the rest of the country. While he is seems to be very pro environmental, hosting an awards show for environmental youth leaders in Oakland, he is accepting a very large sum of money from international coal companies in order to allow them to bring coal into Oakland. While the city of Oakland didn’t want this to happen, the case eventually made its way to the Supreme court, where it was ultimately ruled as ok. Even after this, Phil has been under fire by the Oakland youth, with many protests surrounding his award show for environmental youth.",
@@ -256,18 +257,16 @@
                                                 "reDirect": "",
                                                 "value": ""
                                         }
-			        }
+			        				}
                         };
-
                         changePage("home");
-
                         function changePage(page) {
                                 document.getElementById("home").style.backgroundColor = "#00b300"
                                 document.getElementById("problems").style.backgroundColor = "#00b300"
                                 document.getElementById("solutions").style.backgroundColor = "#00b300"
                                 document.getElementById("data").style.backgroundColor = "#00b300"
                                 document.getElementById("aboutUs").style.backgroundColor = "#00b300"
-				document.getElementById("Blog").style.backgroundColor = "#00b300"
+								document.getElementById("Blog").style.backgroundColor = "#00b300"
                                 document.getElementById(page).style.backgroundColor = "#33ff33"
                                 //maintab
                                 document.getElementById('mainTextBox').style.width = text[page].mtb
@@ -297,10 +296,7 @@
                                 document.getElementById('bottomButton').style.display = text[page].buttonBottom.hidden
                                 document.getElementById('bottomButton').onclick = function() {changePage(text[page].buttonBottom.reDirect)}
                                 document.getElementById('bottomButton').textContent = text[page].buttonBottom.value
-
                         };
                 </script>
         </foot>
 </html>
-
-                                                                                                                                                                                          278,0-1       Bot
